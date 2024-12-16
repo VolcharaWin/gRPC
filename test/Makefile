@@ -1,8 +1,10 @@
-file = test.proto
+all:
+	protoc --go_out=. --go-grpc_out=. test.proto
 
-all: $(TARGET)
+clean:
+	rm test.pb.go example_grpc.pb.go
 
-
-$(TARGET): $(OBJS)
-	protoc --go_out=. --go-grpc_out=. example.proto
+rebuild:
+	clean
+	all
 
