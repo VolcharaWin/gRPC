@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package example;
 
-option go_package = "gRPC;test";
+option go_package = "github.com/VolcharaWin/gRPC;test";
 
 service Auth {
 	rpc Register (RegisterRequest) returns (RegisterResponse);
